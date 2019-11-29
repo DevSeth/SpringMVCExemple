@@ -8,12 +8,25 @@
 	<name>spring3 mvc maven</name>
 
 	<properties>
-		<jdk.version>1.6</jdk.version>
+		<jdk.version>1.8</jdk.version>
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
 	</properties>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-dependencies</artifactId>
+		<version>2.1.4.RELEASE</version>
+	</parent>
+
+
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>2.1.3.RELEASE</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -31,6 +44,7 @@
 
 	<build>
 
+		<finalName>monapp</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
